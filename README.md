@@ -34,7 +34,7 @@ With this tool, users can input their name, the name of the future employer, the
 
 To run the Job Application Helper locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/job-application-helper.git](https://github.com/stillwrinkled/coverme.git`
+1. Clone the repository: `git clone https://github.com/stillwrinkled/coverme.git`
 2. Navigate to the project directory: `cd coverme`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Set up your OpenAI API key in the `app.py` file.
