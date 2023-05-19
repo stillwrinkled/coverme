@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Helper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1 class="heading">Cover me</h1>
+    <form method="POST" action="/">
+        <div class="input-section">
+            <div class="left-col">
+                <label for="employer">Name of future employer:</label>
+                <input type="text" id="employer" name="employer">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role">
+                <label for="coverLetterParas">Number of paragraphs you want in your cover letter:</label>
+                <input type="number" id="coverLetterParas" name="coverLetterParas">
+                <label for="jd">Job Description:</label>
+                <textarea id="jd" name="jd"></textarea>
+            </div>
+            <div class="right-col">
+                <label for="desc1">Write 4 things describing yourself:</label>
+                <input type="text" id="desc1" name="desc1">
+                <input type="text" id="desc2" name="desc2">
+                <input type="text" id="desc3" name="desc3">
+                <input type="text" id="desc4" name="desc4">
+                <label for="cv">Paste your CV:</label>
+                <textarea id="cv" name="cv"></textarea>
+            </div>
+            <div class="submit-button">
+                <input type="submit" id="submit" value="Generate Cover Letter">
+            </div>
+        </div>
+    </form>
+    <div class="output">
+        <label for="output">Here is your Cover Letter:</label>
+        <textarea id="output" readonly>{{ output if output else 'Your cover letter will appear here...' }}</textarea>
+    </div>
+</body>
+</html>
