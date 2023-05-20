@@ -1,3 +1,5 @@
+# coverme
+Cover me: A cover Letter generator 
 # Cover Me: Job Application Helper
 
 A web-based tool that helps you create customized cover letters for job applications. This tool allows you to generate cover letters by providing the job description and inputting your details.
@@ -32,8 +34,8 @@ With this tool, users can input their name, the name of the future employer, the
 
 To run the Job Application Helper locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/job-application-helper.git`
-2. Navigate to the project directory: `cd job-application-helper`
+1. Clone the repository: `git clone https://github.com/stillwrinkled/coverme.git`
+2. Navigate to the project directory: `cd coverme`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Set up your OpenAI API key in the `app.py` file.
 5. Run the application: `python app.py`
