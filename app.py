@@ -3,7 +3,10 @@ import openai
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-openai.api_key = "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"  # Replace with your OpenAI API key
+
+# openai.api_key = ""
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -38,6 +41,7 @@ def index():
         return render_template("index.html", output=cover_letter)
     else:
         return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run()
