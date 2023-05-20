@@ -4,6 +4,15 @@
     <title>Job Application Helper</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("output");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Cover letter copied to clipboard!");
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -11,17 +20,17 @@
     <form method="POST" action="/">
         <div class="input-section">
             <div class="left-col">
-                <label for="employer">Name of future employer:</label>
+                <label for="employer">Name of prospective employer:</label>
                 <input type="text" id="employer" name="employer">
                 <label for="role">Role:</label>
                 <input type="text" id="role" name="role">
-                <label for="coverLetterParas">Number of paragraphs you want in your cover letter:</label>
+                <label for="coverLetterParas">Number of paragraphs in cover letter:</label>
                 <input type="number" id="coverLetterParas" name="coverLetterParas">
                 <label for="jd">Job Description:</label>
                 <textarea id="jd" name="jd"></textarea>
             </div>
             <div class="right-col">
-                <label for="desc1">Write 4 things describing yourself:</label>
+                <label for="desc1">Tell me 4 things about yourself <span class="small-text">(e.g. 7 years of experience)</span>:</label>
                 <input type="text" id="desc1" name="desc1">
                 <input type="text" id="desc2" name="desc2">
                 <input type="text" id="desc3" name="desc3">
@@ -29,6 +38,7 @@
                 <label for="cv">Paste your CV:</label>
                 <textarea id="cv" name="cv"></textarea>
             </div>
+
             <div class="submit-button">
                 <input type="submit" id="submit" value="Generate Cover Letter">
             </div>
@@ -37,6 +47,8 @@
     <div class="output">
         <label for="output">Here is your Cover Letter:</label>
         <textarea id="output" readonly>{{ output if output else 'Your cover letter will appear here...' }}</textarea>
+        <button onclick="copyToClipboard()">Copy</button>
     </div>
+</div>
 </body>
 </html>
