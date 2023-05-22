@@ -1,5 +1,5 @@
 # coverme
-Cover me: A cover Letter generator 
+Cover me: A cover Letter generator for job applications using chatGPT
 # Cover Me: Job Application Helper
 
 A web-based tool that helps you create customized cover letters for job applications. This tool allows you to generate cover letters by providing the job description and inputting your details.
